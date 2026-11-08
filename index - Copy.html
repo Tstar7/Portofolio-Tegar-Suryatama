@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tegar Suryatama | Resume & Portofolio Profesional</title>
+  <link rel="icon" type="image/png" href="images/icon.png?v=1">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Custom Modular Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind Custom Theme Extension -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            inter: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              50: '#f0f4f9',
+              100: '#d9e2ec',
+              200: '#bcccdc',
+              700: '#334e68',
+              800: '#243b53',
+              900: '#102a43',
+              950: '#0b1d30',
+            },
+            primary: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+            },
+            slate: {
+              850: '#152033',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-slate-800 selection:text-white relative pt-16">
+
+  <!-- Top Scroll Reading Progress Indicator -->
+  <div id="scrollProgressBar"></div>
+
+  <!-- ==================== HEADER & NAVBAR (FIXED TOP) ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 w-full navbar-glass border-b border-slate-200/90 transition-all duration-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand Logo & Name -->
+        <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group">
+          <!-- <div class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-sm shadow-sm group-hover:bg-primary-700 transition transform group-hover:scale-105">
+            TS
+          </div> -->
+          <div>
+            <div class="font-bold text-slate-900 tracking-tight text-sm sm:text-base group-hover:text-primary-700 transition">
+              Tegar Suryatama
+            </div>
+            <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] text-slate-500 font-medium whitespace-nowrap">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 live-dot"></span>
+              <span>Available for Hire</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-1 font-medium text-xs sm:text-sm text-slate-600">
+          <a href="#home" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Beranda</a>
+          <!-- <a href="#quick-scan" class="px-3 py-1.5 rounded-md text-primary-700 bg-primary-50 font-semibold hover:bg-primary-100 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-briefcase text-primary-600"></i>Quick Scan
+          </a> -->
+          <a href="#about" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Tentang</a>
+          <a href="#experience" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Pengalaman</a>
+          <a href="#projects" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Proyek</a>
+          <a href="#skills" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Keahlian</a>
+          <a href="#certificates" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Sertifikat</a>
+          <a href="#contact" class="px-3 py-1.5 rounded-md hover:text-slate-900 hover:bg-slate-100 transition">Kontak</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-2.5">
+          <button onclick="openHrdModal()" class="px-3.5 py-1.5 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg transition shadow-sm hover:border-slate-400">
+            <i class="fa-regular fa-handshake mr-1 text-slate-600"></i> Salam HRD
+          </button>
+          
+          <a href="CV_Tegar Suryatama.pdf" download="CV_Tegar_Suryatama.pdf" class="px-3.5 py-1.5 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-sm transition flex items-center gap-1.5 hover:shadow">
+            <i class="fa-solid fa-download text-[11px]"></i> Unduh CV (PDF)
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-3 pb-6 space-y-2 text-sm font-medium shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+      <a href="#home" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Beranda</a>
+      <a href="#quick-scan" class="block px-3 py-2 rounded-md text-primary-700 bg-primary-50 font-bold" onclick="toggleMobileMenu()">Quick Scan</a>
+      <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Tentang & Latar Belakang</a>
+      <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Pengalaman Kerja</a>
+      <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Portofolio Proyek</a>
+      <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Keahlian & Tools</a>
+      <a href="#certificates" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Sertifikat</a>
+      <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-slate-100" onclick="toggleMobileMenu()">Hubungi Saya</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="CV_Tegar Suryatama.pdf" download="CV_Tegar_Suryatama.pdf" class="w-full text-center py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-lg shadow-sm transition">
+          <i class="fa-solid fa-download mr-1"></i> Unduh CV (PDF)
+        </a>
+        <button onclick="openHrdModal(); toggleMobileMenu();" class="w-full text-center py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 font-semibold rounded-lg transition">
+          🤝 Pesan Khusus HRD
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-12 sm:space-y-16">
+
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section id="home" class="pt-1 sm:pt-4" data-aos="fade-up" data-aos-duration="700">
+      <div class="bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200 shadow-sm relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
+          
+          <!-- Left Column: Bio & Title -->
+          <div class="lg:col-span-8 space-y-4 sm:space-y-5 text-left">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold max-w-full">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 live-dot shrink-0"></span>
+              <span class="truncate sm:whitespace-normal">Terbuka untuk Peluang Kerja: Administrasi & Inventori</span>
+            </div>
+
+            <div>
+              <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Tegar Suryatama
+              </h1>
+
+              <div class="text-xs sm:text-sm text-slate-500 mt-2 flex items-center gap-2 flex-wrap font-medium">
+                <span>D3 Manajemen Informatika</span>
+                <span>•</span>
+                <span>Politeknik Negeri Sriwijaya</span>
+                <span>•</span>
+                <span>Palembang, Indonesia</span>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm lg:text-base text-slate-600 leading-relaxed max-w-2xl text-justify">
+              Profesional yang berfokus pada <strong class="text-slate-800">akurasi data administrasi, tata kelola stok gudang, pencatatan Zahir Accounting</strong>, serta integrasi solusi <strong class="text-slate-800">aplikasi web operasional</strong> untuk efisiensi sistem kerja. Memiliki ketelitian tinggi, cepat beradaptasi, dan siap berkontribusi secara konsisten bagi perusahaan.
+            </p>
+
+            <!-- CTA Actions Group -->
+            <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2">
+              <a href="CV_Tegar Suryatama.pdf" download="CV_Tegar_Suryatama.pdf" class="flex-1 sm:flex-initial px-4 sm:px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm rounded-lg shadow-sm transition flex items-center justify-center gap-2 transform hover:-translate-y-0.5 whitespace-nowrap min-w-[130px]">
+                <i class="fa-solid fa-file-arrow-down"></i> Unduh CV (PDF)
+              </a>
+
+              <a href="#quick-scan" class="flex-1 sm:flex-initial px-3.5 sm:px-4 py-2.5 bg-primary-50 hover:bg-primary-100 text-primary-800 font-semibold text-xs sm:text-sm rounded-lg border border-primary-200 transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[130px]">
+                <i class="fa-solid fa-briefcase text-primary-600"></i> HR Quick Scan
+              </a>
+
+              <a href="https://wa.me/6282179836377?text=Halo%20Tegar,%20saya%20tertarik%20dengan%20profil%20dan%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial px-3.5 sm:px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-xs sm:text-sm rounded-lg border border-slate-300 shadow-sm transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[110px]">
+                <i class="fa-brands fa-whatsapp text-emerald-600"></i> WhatsApp
+              </a>
+
+              <button onclick="copyToClipboard('tegarsuryatama73@gmail.com', 'Alamat email berhasil disalin!')" class="flex-1 sm:flex-initial px-3.5 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs flex items-center justify-center gap-1.5 transition whitespace-nowrap min-w-[110px]">
+                <i class="fa-regular fa-copy"></i> Salin Email
+              </button>
+            </div>
+
+            <!-- Social Links Fast Bar -->
+            <div class="pt-2 flex flex-wrap items-center gap-2 sm:gap-3 text-slate-500 text-xs font-medium">
+              <span class="text-slate-400">Tautan Resmi:</span>
+              <a href="https://www.linkedin.com/in/tegar-suryatama-102b65221/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-700 transition flex items-center gap-1">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+              <span class="text-slate-300">•</span>
+              <a href="https://www.instagram.com/tegar._.suryatama/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-700 transition flex items-center gap-1">
+                <i class="fa-brands fa-instagram"></i> Instagram
+              </a>
+              <span class="text-slate-300">•</span>
+              <a href="https://tstar7.github.io/Starmoon-Labs/" target="_blank" rel="noopener noreferrer" class="hover:text-primary-700 transition flex items-center gap-1">
+                <i class="fa-solid fa-globe"></i> Starmoon Labs
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Profile Picture with Subtle Elevation -->
+          <div class="lg:col-span-4 flex flex-col items-center justify-center mt-2 lg:mt-0">
+            <div class="w-48 h-48 sm:w-60 sm:h-60 lg:w-64 lg:h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100 transition-transform duration-300 hover:scale-[1.02]">
+              <img src="images/saya.jpeg" alt="Foto Tegar Suryatama" class="w-full h-full object-cover object-top">
+            </div>
+            <div class="mt-3 text-center w-full px-2">
+              <span class="inline-block px-3 py-1 bg-slate-100 rounded-md text-[11px] sm:text-xs font-semibold text-slate-700 border border-slate-200 max-w-full">
+                Administrasi Gudang • Koperasi Wanita Petra RU III
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Metric Stat Counters Bar (Animated CountUp on View) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-8 pt-6 border-t border-slate-100" id="statsSection">
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center transition hover:bg-slate-100/80">
+            <div class="text-xl sm:text-3xl font-bold text-slate-900 flex items-center justify-center gap-0.5">
+              <span class="counter-num" data-target="8">0</span><span>+</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Aplikasi Web Dibangun</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center transition hover:bg-slate-100/80">
+            <div class="text-xl sm:text-3xl font-bold text-slate-900 flex items-center justify-center gap-0.5">
+              <span class="counter-num" data-target="3">0</span><span>+ Th</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Pengalaman & Usaha</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center transition hover:bg-slate-100/80">
+            <div class="text-xl sm:text-3xl font-bold text-slate-900 flex items-center justify-center gap-0.5">
+              <span class="counter-num" data-target="5">0</span><span>+</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Sertifikasi MySkill</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200/70 text-center transition hover:bg-slate-100/80">
+            <div class="text-xl sm:text-3xl font-bold text-emerald-700 flex items-center justify-center gap-0.5">
+              <span class="counter-num" data-target="100">0</span><span>%</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">Siap Penempatan Kerja</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 2. HR QUICK SCAN PANEL ==================== -->
+    <section id="quick-scan" class="scroll-mt-20" data-aos="fade-up">
+      <div class="bg-navy-900 text-white rounded-2xl p-5 sm:p-8 border border-navy-800 shadow-md">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-navy-800 pb-5 mb-6">
+          <div>
+            <div class="flex items-center gap-2 text-primary-200 text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-clipboard-check text-emerald-400"></i> Executive Summary
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">
+              HR Quick Scan (Ringkasan Kualifikasi)
+            </h2>
+            <p class="text-slate-300 text-xs sm:text-sm mt-0.5">
+              Gambaran cepat keahlian dan kualifikasi utama untuk mempermudah evaluasi recruiter.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2.5 w-full sm:w-auto">
+            <button onclick="openHrdModal()" class="flex-1 sm:flex-initial px-3.5 py-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold text-xs rounded-lg transition shadow-sm text-center">
+              <i class="fa-regular fa-envelope mr-1"></i> Pesan HRD
+            </button>
+            <a href="CV_Tegar Suryatama.pdf" download="CV_Tegar_Suryatama.pdf" class="flex-1 sm:flex-initial px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-semibold text-xs rounded-lg transition text-center">
+              <i class="fa-solid fa-download mr-1"></i> Unduh CV
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Core Pillars Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          
+          <!-- Pillar 1 -->
+          <div class="bg-navy-800/90 border border-navy-700 p-4 rounded-xl space-y-2 hover:border-navy-600 transition">
+            <div class="text-emerald-400 text-base font-bold">
+              <i class="fa-solid fa-graduation-cap mr-1"></i> Pendidikan
+            </div>
+            <h3 class="font-bold text-sm text-white">D3 Manajemen Informatika</h3>
+            <p class="text-xs text-slate-300">Politeknik Negeri Sriwijaya (Polsri). Berpengalaman dalam logika pemrograman, basis data, dan sistem informasi.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-navy-800/90 border border-navy-700 p-4 rounded-xl space-y-2 hover:border-navy-600 transition">
+            <div class="text-primary-300 text-base font-bold">
+              <i class="fa-solid fa-boxes-stacked mr-1"></i> Administrasi & Stok
+            </div>
+            <h3 class="font-bold text-sm text-white">Operasional Gudang & Dapur</h3>
+            <p class="text-xs text-slate-300">Stock opname, sistem operasional dapur catering, verifikasi nota supplier, buffer stock, dan rekonsiliasi data.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-navy-800/90 border border-navy-700 p-4 rounded-xl space-y-2 hover:border-navy-600 transition">
+            <div class="text-amber-300 text-base font-bold">
+              <i class="fa-solid fa-computer mr-1"></i> Software & Tools
+            </div>
+            <h3 class="font-bold text-sm text-white">Aplikasi & AI Utama</h3>
+            <p class="text-xs text-slate-300">Microsoft Excel, Zahir Accounting, Web Dev, Antigravity AI, Google Workspace & Canva.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="bg-navy-800/90 border border-navy-700 p-4 rounded-xl space-y-2 hover:border-navy-600 transition">
+            <div class="text-emerald-400 text-base font-bold">
+              <i class="fa-solid fa-user-check mr-1"></i> Status Kerja
+            </div>
+            <h3 class="font-bold text-sm text-emerald-300">Siap Bergabung Segera</h3>
+            <p class="text-xs text-slate-300">Terbuka untuk posisi Administrasi, Staf Gudang dan Pengelola Data.</p>
+          </div>
+
+        </div>
+
+        <!-- Quick Contacts -->
+        <div class="mt-5 pt-4 border-t border-navy-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-300">
+          <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
+            <span class="break-all sm:break-normal"><i class="fa-solid fa-envelope text-slate-400 mr-1"></i> tegarsuryatama73@gmail.com</span>
+            <span class="whitespace-nowrap"><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> 0821-7983-6377</span>
+            <span class="whitespace-nowrap"><i class="fa-solid fa-location-dot text-slate-400 mr-1"></i> Palembang, Sumatera Selatan</span>
+          </div>
+          <button onclick="copyToClipboard('tegarsuryatama73@gmail.com', 'Email Tegar berhasil disalin!')" class="text-primary-300 hover:text-white font-medium underline underline-offset-2 self-start sm:self-auto">
+            Salin Alamat Email
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3. LATAR BELAKANG & TENTANG SAYA ==================== -->
+    <section id="about" class="scroll-mt-20" data-aos="fade-up">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Profil Singkat</span>
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mt-1">Latar Belakang & Nilai Tambah</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Left: Bio Text -->
+        <div class="lg:col-span-7 bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm space-y-3.5 text-slate-600 text-sm leading-relaxed text-justify">
+          <p>
+            Saya adalah lulusan <strong class="text-slate-800">D3 Manajemen Informatika dari Politeknik Negeri Sriwijaya</strong> yang memiliki latar belakang terstruktur dalam teknologi informasi, administrasi perkantoran, dan manajemen pergudangan operasional.
+          </p>
+          <p>
+            Dalam pekerjaan sehari-hari, saya terbiasa melakukan pencatatan data secara akurat, pengawasan stok fisik, serta penggunaan software akuntansi dan spreadsheet seperti <strong class="text-slate-800">Microsoft Excel</strong> dan <strong class="text-slate-800">Zahir Accounting</strong>.
+          </p>
+          <p>
+            Saat ini, saya bertugas sebagai <strong class="text-slate-800">Administrasi Gudang di Koperasi Wanita Petra RU III Plaju</strong>, menangani pemeriksaan barang supplier, stock opname rutin, dan pencatatan transaksi pembelian. Saya juga berinisiatif merancang aplikasi web pendukung operasional seperti <strong class="text-slate-900 font-semibold">Aplikasi Kartu Stok Digital</strong> untuk monitoring persediaan harian serta <strong class="text-slate-900 font-semibold">System Operational Management Dapur KWP</strong> guna digitalisasi manajemen operasional katering dapur secara terorganisir.
+          </p>
+          <p>
+            Selain itu, melalui usaha mandiri <strong class="text-slate-800">Starmoon Labs</strong> dan penguasaan tools kecerdasan buatan seperti <strong class="text-slate-800">Antigravity AI</strong>, saya terus mengasah efisiensi alur kerja digital, kedisiplinan tenggat waktu, dan penyelesaian proyek secara solutif.
+          </p>
+        </div>
+
+        <!-- Right: Core Work Values -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-3.5">
+          
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-left" data-aos-delay="100">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-check-double"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-sm">Ketelitian & Validasi Data</h3>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Memastikan data stok fisik, arsip faktur/nota pembelian, dan pencatatan di sistem akuntansi selalu sinkron tanpa selisih.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-left" data-aos-delay="200">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-sm">Inisiatif Digitalisasi Sistem</h3>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Mampu membangun tools web terapan (Kartu Stok & Manajemen Dapur KWP) untuk memangkas alur kerja manual dan mempercepat pemantauan data.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-left" data-aos-delay="300">
+            <div class="flex items-center gap-2.5 mb-1.5">
+              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-people-arrows"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-sm">Kerja Sama Lintas Tim</h3>
+            </div>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Berpengalaman berkoordinasi langsung dengan pihak supplier, rekan tim lapangan kilang Pertamina, serta manajemen pengurus koperasi.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. PENGALAMAN KERJA ==================== -->
+    <section id="experience" class="scroll-mt-20" data-aos="fade-up">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Riwayat Karir</span>
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mt-1">Pengalaman Kerja & Kontribusi</h2>
+      </div>
+
+      <div class="relative border-l border-slate-300 ml-2.5 sm:ml-4 space-y-6 sm:space-y-8">
+        
+        <!-- Experience 1: Administrasi Gudang -->
+        <div class="relative pl-5 sm:pl-8 group" data-aos="fade-up" data-aos-delay="100">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-900 ring-4 ring-white group-hover:scale-125 transition-transform"></div>
+
+          <div class="bg-white p-5 sm:p-7 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900">Administrasi Gudang</h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-600">Koperasi Wanita Petra RU III Plaju</p>
+              </div>
+              <span class="self-start sm:self-auto px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">
+                Okt 2025 – Sekarang
+              </span>
+            </div>
+
+            <ul class="mt-4 space-y-2.5 text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span><strong>Pemeriksaan Barang Masuk:</strong> Memeriksa fisik barang dari supplier dan mencocokkan jumlah, mutu, dan spesifikasi sesuai nota pembelian.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span><strong>Manajemen Gudang:</strong> Mengatur keteraturan gudang bahan kering, bahan basah, dan persediaan susu extrapuding agar stok terorganisir dan siap pakai.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span><strong>Input Zahir Accounting:</strong> Mencatat faktur pembelian barang ke Zahir Accounting dan melakukan rekonsiliasi data dengan spreadsheet Excel.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span><strong>Stock Opname Berkala:</strong> Melakukan audit fisik persediaan secara berkala guna memastikan kesesuaian data fisik dan pembukuan.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span><strong>Inovasi Sistem Terapan:</strong> Merancang dan membangun sistem digital internal, yaitu <em>Aplikasi Kartu Stok Digital</em> untuk monitoring mutasi stok harian, serta <em>System Operational Management Dapur KWP</em> untuk mengelola alur operasional, bahan baku, dan distribusi katering dapur.</span>
+              </li>
+            </ul>
+
+            <div class="mt-4 pt-3.5 border-t border-slate-100 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 bg-slate-100 rounded text-slate-700 font-medium">Zahir Accounting</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded text-slate-700 font-medium">Stock Opname</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded text-slate-700 font-medium">Manajemen Dapur KWP</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded text-slate-700 font-medium">Kartu Stok Digital</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded text-slate-700 font-medium">Microsoft Excel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Food Handler -->
+        <div class="relative pl-5 sm:pl-8 group" data-aos="fade-up" data-aos-delay="200">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 ring-4 ring-white group-hover:scale-125 transition-transform"></div>
+
+          <div class="bg-white p-5 sm:p-7 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900">Food Handler</h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-600">Koperasi Wanita Petra RU III Plaju</p>
+              </div>
+              <span class="self-start sm:self-auto px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 text-xs font-medium">
+                Jul – Sep 2025
+              </span>
+            </div>
+
+            <ul class="mt-4 space-y-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>Menyiapkan dan mengemas porsi makanan untuk karyawan Pertamina RU III Plaju dengan standar kebersihan dan keamanan pangan ketat.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>Melayani distribusi konsumsi di area kilang Pertamina tepat waktu sesuai jadwal operasional.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 3: Starmoon Labs -->
+        <div class="relative pl-5 sm:pl-8 group" data-aos="fade-up" data-aos-delay="300">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-900 ring-4 ring-white group-hover:scale-125 transition-transform"></div>
+
+          <div class="bg-white p-5 sm:p-7 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900">Digital Freelancer</h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-600">Starmoon Labs</p>
+              </div>
+              <span class="self-start sm:self-auto px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">
+                Maret 2024 – Mei 2026
+              </span>
+            </div>
+
+            <ul class="mt-4 space-y-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>Mengelola usaha mandiri penyedia layanan digital: pembuatan CV ATS, pembuatan aplikasi berbasis web untuk mahasiswa, pembuatan tugas sekolah-kuliah dan pengolahan dokumen.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>Membangun komunikasi langsung dengan klien, manajemen deadline, dan penjaminan kualitas hasil kerja.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 4: PLN UID S2JB -->
+        <div class="relative pl-5 sm:pl-8 group" data-aos="fade-up" data-aos-delay="400">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 ring-4 ring-white group-hover:scale-125 transition-transform"></div>
+
+          <div class="bg-white p-5 sm:p-7 rounded-xl border border-slate-200 shadow-sm hover:border-slate-300 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900">Magang Administrasi</h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-600">PT PLN (Persero) UID S2JB</p>
+              </div>
+              <span class="self-start sm:self-auto px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 text-xs font-medium">
+                Agt – Nov 2023
+              </span>
+            </div>
+
+            <ul class="mt-4 space-y-2 text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>Mengelola dan memperbarui database pelanggan menggunakan Microsoft Excel secara terstruktur.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>Membantu digitalisasi arsip dokumen logistik, input data barang masuk/keluar, dan penyusunan laporan periodik.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. SHOWCASE PROYEK & KARYA ==================== -->
+    <section id="projects" class="scroll-mt-20" data-aos="fade-up">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Portofolio Kinerja</span>
+          <h2 class="text-2xl font-bold text-slate-900 tracking-tight mt-1">Daftar Proyek & Aplikasi</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">Sistem aplikasi web operasional, sistem pendukung keputusan, dan pengolahan data.</p>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-64">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+          <input type="text" id="projectSearch" onkeyup="searchProjects()" placeholder="Cari proyek / tools..." class="w-full pl-8 pr-3 py-1.5 rounded-lg text-xs bg-white border border-slate-300 focus:outline-none focus:ring-1 focus:ring-slate-800 transition">
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap no-scrollbar" id="projectFilterGroup">
+        <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 text-white shadow-sm transition whitespace-nowrap shrink-0 sm:shrink">
+          Semua Proyek (12)
+        </button>
+        <button onclick="filterProjects('webapp')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition whitespace-nowrap shrink-0 sm:shrink">
+          <i class="fa-solid fa-code text-slate-500 mr-1"></i> Aplikasi Web
+        </button>
+        <button onclick="filterProjects('admin')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition whitespace-nowrap shrink-0 sm:shrink">
+          <i class="fa-solid fa-table text-slate-500 mr-1"></i> Administrasi & Data
+        </button>
+        <button onclick="filterProjects('design')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition whitespace-nowrap shrink-0 sm:shrink">
+          <i class="fa-solid fa-palette text-slate-500 mr-1"></i> Desain & Media
+        </button>
+      </div>
+
+      <!-- 12 Cohesive Projects Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6" id="projectsGrid">
+
+        <!-- Card 1: Kartu Stok Digital -->
+        <div class="project-item webapp admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Aplikasi Kartu Stok Digital Berbasis Web" data-tech="PHP MySQL Tailwind phpMyAdmin" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-emerald-400">Web App • Database</span>
+                <i class="fa-solid fa-boxes-stacked text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Inovasi Gudang</div>
+                <div class="font-bold text-base text-white tracking-tight">Kartu Stok Digital</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Aplikasi Kartu Stok Digital Gudang</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Sistem digitalisasi kartu stok barang gudang untuk pencatatan mutasi barang masuk/keluar, peringatan batas minimum stok, dan ekspor laporan mutasi.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MySQL</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Tailwind</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('kartu-stok')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Fitur
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: System Operational Management Dapur KWP -->
+        <div class="project-item webapp admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="System Operational Management Dapur KWP" data-tech="PHP MySQL Tailwind Operasional Katering" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-emerald-400">Web App • Manajemen Dapur</span>
+                <i class="fa-solid fa-utensils text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Manajemen Katering KWP</div>
+                <div class="font-bold text-base text-white tracking-tight">System Operational Dapur KWP</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">System Operational Management Dapur KWP</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Sistem terpadu tata kelola operasional dapur katering Koperasi Wanita Petra RU III Plaju untuk penjadwalan menu harian, monitoring bahan baku dapur, dan rekapitulasi distribusi porsi makanan.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MySQL</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Tailwind</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Operasional</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('dapur-kwp')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail Fitur
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: PKH SAW -->
+        <div class="project-item webapp bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Aplikasi Pengelola Bantuan PKH Metode SAW" data-tech="PHP MySQL Tailwind SAW" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-primary-300">Decision Support System</span>
+                <i class="fa-solid fa-hand-holding-heart text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Metode SAW</div>
+                <div class="font-bold text-base text-white tracking-tight">Pengelola Bantuan PKH</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Aplikasi Pengelola Bantuan PKH (Metode SAW)</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Sistem seleksi dan manajemen penerima bantuan PKH dengan perhitungan otomatis Simple Additive Weighting (SAW) agar penilaian objektif dan transparan.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP Native</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Metode SAW</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MySQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('pkh')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Beasiswa SMART -->
+        <div class="project-item webapp bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Aplikasi Penerimaan Beasiswa Metode SMART" data-tech="PHP MySQL Tailwind SMART" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-amber-300">Seleksi & Perangkingan</span>
+                <i class="fa-solid fa-graduation-cap text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Metode SMART</div>
+                <div class="font-bold text-base text-white tracking-tight">Penerimaan Beasiswa Web</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Aplikasi Penerimaan Beasiswa (Metode SMART)</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Platform pendaftaran dan perangkingan beasiswa online berbasis Simple Multi-Attribute Rating Technique untuk mempermudah evaluasi berkas.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">SMART Method</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MySQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('beasiswa')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Checklist IT -->
+        <div class="project-item webapp bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Aplikasi Checklist Perangkat IT Monitoring" data-tech="PHP MySQL Tailwind IT Support Maintenance" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-emerald-400">IT Maintenance & Audit</span>
+                <i class="fa-solid fa-laptop-file text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Monitoring Hardware</div>
+                <div class="font-bold text-base text-white tracking-tight">Checklist Perangkat IT</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Aplikasi Checklist Perangkat IT Berbasis Web</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Pencatatan dan audit berkala kondisi hardware dan software IT kantor, jadwal maintenance preventif, dan notifikasi kendala perangkat.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">IT Support</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP & MySQL</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Log Audit</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('checklist-it')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: SPB Barang -->
+        <div class="project-item webapp admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Aplikasi Verifikasi Surat Pembayaran Barang SPB" data-tech="PHP Bootstrap MySQL Logistik" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-primary-300">Logistik & Dokumen</span>
+                <i class="fa-solid fa-file-invoice-dollar text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Validasi Berjenjang</div>
+                <div class="font-bold text-base text-white tracking-tight">Verifikasi SPB Barang</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Aplikasi Verifikasi Surat Pembayaran Barang (SPB)</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Sistem verifikasi keabsahan dokumen pengeluaran barang, pemesanan logistik, dan rekapitulasi surat jalan secara terstruktur.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Bootstrap 5</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP MySQL</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Verifikasi</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('spb')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 7: Kamus Aksara Ulu -->
+        <div class="project-item webapp bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Kamus Aksara Ulu Web APK EXE Offline" data-tech="JavaScript JSON NoSQL PWA Offline" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-amber-300">NoSQL DB • Offline App</span>
+                <i class="fa-solid fa-book-atlas text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Multiplatform PWA/APK</div>
+                <div class="font-bold text-base text-white tracking-tight">Kamus Aksara Ulu</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Kamus & Transliterasi Aksara Ulu</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Aplikasi kamus kata dan transliterasi teks Latin ke Aksara Ulu secara instan, berjalan 100% offline tanpa koneksi internet.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">JavaScript</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">JSON NoSQL</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Offline PWA</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('aksara-ulu')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 8: Kantor Camat -->
+        <div class="project-item webapp admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Aplikasi Administrasi Kantor Camat Banyuasin I" data-tech="PHP MySQL Tailwind Pelayanan Publik" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-emerald-400">E-Government</span>
+                <i class="fa-solid fa-landmark text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Pelayanan Administrasi Publik</div>
+                <div class="font-bold text-base text-white tracking-tight">Kantor Camat Banyuasin I</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Layanan Administrasi Kantor Camat</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Sistem pelayanan pengajuan surat menyurat warga secara online, upload dokumen persyaratan, dan tracking status permohonan.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">E-Gov</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">PHP & MySQL</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Tracking Status</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('camat')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail Fitur
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 9: Excel Data Analytics -->
+        <div class="project-item admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Pengelolaan Data Excel Pivot Table & Dashboard" data-tech="Excel Pivot VLOOKUP Dashboard Analisis Data" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-emerald-400">Spreadsheet • Analytics</span>
+                <i class="fa-solid fa-file-excel text-2xl text-emerald-400"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Pivot Table & Formula</div>
+                <div class="font-bold text-base text-white tracking-tight">Excel Data Analytics</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Pengelolaan Data & Dashboard Excel</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Pengolahan formula, ringkasan Pivot Table, dan visualisasi grafik dashboard untuk laporan operasional.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Pivot Table</span>
+                <!-- <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Formula Lanjutan</span> -->
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Dashboard</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('excel-analytics')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 10: Administrasi Kantor & Pengarsipan -->
+        <div class="project-item admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Administrasi Kantor & Pengarsipan Digital" data-tech="Office Google Suite Pengarsipan Korespondensi" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-primary-300">Office Administration</span>
+                <i class="fa-solid fa-folder-tree text-2xl text-slate-300"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Tata Kelola Berkas</div>
+                <div class="font-bold text-base text-white tracking-tight">Administrasi & Arsip Digital</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Administrasi Kantor & Dokumen Digital</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Penyusunan berkas administrasi formal, korespondensi surat resmi kepegawaian, dan pengarsipan digital terstruktur di Google Drive.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">MS Office</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Google Suite</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Arsip Cloud</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('administrasi-office')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 11: Desain Visual Canva -->
+        <div class="project-item design bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Desain Visual Canva & Kreatif Digital" data-tech="Canva Desain Visual Branding Media" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-pink-300">Graphic Design</span>
+                <i class="fa-solid fa-palette text-2xl text-pink-400"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Media Kreatif & Promosi</div>
+                <div class="font-bold text-base text-white tracking-tight">Desain Visual Canva</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Desain Visual & Media Kreatif Canva</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Pembuatan materi visual presentasi bisnis, infografis data terstruktur, poster publikasi, dan materi branding promosi digital.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Canva Pro</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Infografis</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Branding</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('desain-canva')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 12: Starmoon Labs Portfolio -->
+        <div class="project-item design admin bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between" data-title="Freelance Services Starmoon Labs" data-tech="CV Digital Web Landing Page Konversi Dokumen" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="project-banner bg-slate-900 text-white">
+              <div class="flex items-center justify-between">
+                <span class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-[11px] font-mono text-amber-300">Freelance Business</span>
+                <i class="fa-solid fa-rocket text-2xl text-amber-400"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">Digital Service Showcase</div>
+                <div class="font-bold text-base text-white tracking-tight">Starmoon Labs</div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-base text-slate-900">Portofolio Layanan Starmoon Labs</h3>
+              <p class="text-slate-600 text-xs mt-2 text-justify line-clamp-3 leading-relaxed">
+                Koleksi pengerjaan pesanan klien nyata mulai dari pembuatan CV ATS profesional, pembuatan website, hingga penataan format dokumen.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">CV Drafting</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Web Portfolio</span>
+                <span class="px-2 py-0.5 bg-slate-100 text-slate-700 text-[11px] font-medium rounded">Dokumen Digital</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 pt-0">
+            <button onclick="openProjectModal('starmoon-labs')" class="w-full py-2 bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 font-semibold text-xs rounded-lg border border-slate-200 transition flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-eye"></i> Lihat Detail & Dokumen
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. KEAHLIAN & PENGGUNAAN TOOLS ==================== -->
+    <section id="skills" class="scroll-mt-20" data-aos="fade-up">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Keterampilan Teknis</span>
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mt-1">Skill & Penggunaan Perangkat Lunak</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" id="skillsSection">
+
+        <!-- Skill 1: Microsoft Office -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/office.png" alt="Microsoft Office" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Microsoft Office</h3>
+            <p class="text-[11px] font-semibold text-slate-500">Excel, Word, PowerPoint</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Mahir mengolah formula Excel (VLOOKUP, Pivot Table, Laporan Stok) dan penyusunan berkas resmi.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">95% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="95%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 2: Zahir Accounting -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/zahirlogo.png" alt="Zahir Accounting" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Zahir Accounting</h3>
+            <p class="text-[11px] font-semibold text-slate-500">Software Akuntansi & Inventori</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Input faktur pembelian barang masuk, penyesuaian barang, stock opname, dan sinkronisasi data.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">85% (Proficient)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 3: Antigravity AI -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="150">
+          <div>
+             <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/Googleantigravity.png" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Antigravity AI</h3>
+            <p class="text-[11px] font-semibold text-slate-500">AI Coding Agent & Prompt Automation</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Memanfaatkan agen AI untuk percepatan penulisan kode, debugging sistem, otomatisasi alur kerja, dan pengembangan web modern.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">90% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 4: Google Workspace -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/google.png" alt="Google Workspace" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Google Workspace</h3>
+            <p class="text-[11px] font-semibold text-slate-500">Docs, Sheets, Drive, Forms</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Kolaborasi berkas digital daring, form pengumpulan data, pengarsipan cloud storage, dan sinkronisasi.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">90% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 5: Canva Design -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/canva.png" alt="Canva" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Canva Design</h3>
+            <p class="text-[11px] font-semibold text-slate-500">Media Kreatif & Infografis</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Membuat materi visual presentasi perusahaan, banner promosi, infografis data, dan publikasi.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">95% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="95%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 6: AI Generatif -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/chatgpt.png" alt="ChatGPT" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Generative AI Tools</h3>
+            <p class="text-[11px] font-semibold text-slate-500">ChatGPT, Claude, Prompting</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Pemanfaatan AI untuk efisiensi analisis data, drafting naskah, otomatisasi formula Excel, dan riset.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">90% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 7: Web Development -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="50">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/vsc.png" alt="VS Code & Web Development" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Web Development</h3>
+            <p class="text-[11px] font-semibold text-slate-500">PHP, MySQL, Tailwind, JS</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Membangun aplikasi web sistem informasi administrasi, kartu stok, manajemen dapur KWP, dan database.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">90% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 8: Trello
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/trello.png" alt="Trello" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Project Workflow</h3>
+            <p class="text-[11px] font-semibold text-slate-500">Trello & Kanban Board</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Pengelolaan tahapan kerja, tracking deadline proyek freelance, dan monitoring progress tim.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">85% (Proficient)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="85%"></div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Skill 9: Zoom -->
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-slate-50 border border-slate-100 p-2 flex items-center justify-center mb-3">
+              <img src="images/zoom.png" alt="Zoom" class="w-full h-full object-contain">
+            </div>
+            <h3 class="font-bold text-sm text-slate-900">Virtual Communication</h3>
+            <p class="text-[11px] font-semibold text-slate-500">Zoom, Google Meet</p>
+            <p class="text-slate-600 text-xs mt-2 text-justify leading-relaxed">
+              Penyelenggaraan rapat virtual, koordinasi tim jarak jauh, dan dokumentasi notulensi.
+            </p>
+          </div>
+          <div class="mt-4 pt-2.5 border-t border-slate-100">
+            <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1">
+              <span>Tingkat Kemahiran</span>
+              <span class="text-slate-900 font-bold">90% (Advanced)</span>
+            </div>
+            <div class="w-full bg-slate-100 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-slate-800 h-1.5 rounded-full skill-bar-fill" data-progress="90%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 7. SERTIFIKAT RESMI ==================== -->
+    <section id="certificates" class="scroll-mt-20" data-aos="fade-up">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Validasi Kredensial</span>
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mt-1">Sertifikasi Resmi Terverifikasi</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Cert 1 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="50">
+          <div class="relative overflow-hidden bg-slate-100 cursor-pointer" onclick="openCertModal('images/5.jpg', 'Microsoft Excel, Word And PowerPoint', 'MySkill', '18 Februari 2025')">
+            <img src="images/5.jpg" alt="Sertifikat Microsoft Office" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk Perbesar
+            </div>
+          </div>
+          <div class="p-4">
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold">MySkill Certified</span>
+            <h3 class="font-bold text-sm text-slate-900 mt-1.5">Microsoft Excel, Word And PowerPoint</h3>
+            <div class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <i class="fa-regular fa-calendar text-slate-400"></i> 18 Februari 2025
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative overflow-hidden bg-slate-100 cursor-pointer" onclick="openCertModal('images/1.jpg', 'Artificial Intelligence', 'MySkill', '27 November 2024')">
+            <img src="images/1.jpg" alt="Sertifikat AI" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk Perbesar
+            </div>
+          </div>
+          <div class="p-4">
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold">MySkill Certified</span>
+            <h3 class="font-bold text-sm text-slate-900 mt-1.5">Artificial Intelligence (AI)</h3>
+            <div class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <i class="fa-regular fa-calendar text-slate-400"></i> 27 November 2024
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="150">
+          <div class="relative overflow-hidden bg-slate-100 cursor-pointer" onclick="openCertModal('images/3.jpg', 'Basic Accounting', 'MySkill', '29 November 2024')">
+            <img src="images/3.jpg" alt="Sertifikat Akuntansi" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk Perbesar
+            </div>
+          </div>
+          <div class="p-4">
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold">MySkill Certified</span>
+            <h3 class="font-bold text-sm text-slate-900 mt-1.5">Basic Accounting & Finance</h3>
+            <div class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <i class="fa-regular fa-calendar text-slate-400"></i> 29 November 2024
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 4 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden bg-slate-100 cursor-pointer" onclick="openCertModal('images/2.jpg', 'Basic Data Analytics', 'MySkill', '29 Oktober 2024')">
+            <img src="images/2.jpg" alt="Sertifikat Data" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk Perbesar
+            </div>
+          </div>
+          <div class="p-4">
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold">MySkill Certified</span>
+            <h3 class="font-bold text-sm text-slate-900 mt-1.5">Basic Data Analysis</h3>
+            <div class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <i class="fa-regular fa-calendar text-slate-400"></i> 29 Oktober 2024
+            </div>
+          </div>
+        </div>
+
+        <!-- Cert 5 -->
+        <div class="bg-white rounded-xl border border-slate-200 overflow-hidden card-clean flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="250">
+          <div class="relative overflow-hidden bg-slate-100 cursor-pointer" onclick="openCertModal('images/4.jpg', 'Canva for Design', 'MySkill', '16 September 2024')">
+            <img src="images/4.jpg" alt="Sertifikat Canva" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+              <i class="fa-solid fa-magnifying-glass-plus"></i> Klik untuk Perbesar
+            </div>
+          </div>
+          <div class="p-4">
+            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold">MySkill Certified</span>
+            <h3 class="font-bold text-sm text-slate-900 mt-1.5">Canva for Visual Design</h3>
+            <div class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <i class="fa-regular fa-calendar text-slate-400"></i> 16 September 2024
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 8. SOFT SKILLS ==================== -->
+    <section class="scroll-mt-20" data-aos="fade-up">
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Etos Kerja</span>
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mt-1">Karakteristik & Keterampilan Lunak</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="50">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-base mb-3">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3 class="font-bold text-sm text-slate-900">Manajemen Waktu & Prioritas</h3>
+          <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Menyusun skala prioritas pekerjaan, disiplin terhadap tenggat waktu, dan menjaga konsistensi alur kerja harian.
+          </p>
+        </div>
+
+        <div class="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-base mb-3">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="font-bold text-sm text-slate-900">Komunikasi Efektif</h3>
+          <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Berkoordinasi secara jelas, santun, dan profesional dengan rekan kerja internal maupun supplier eksternal.
+          </p>
+        </div>
+
+        <div class="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="150">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-base mb-3">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="font-bold text-sm text-slate-900">Problem Solving</h3>
+          <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Tanggap mencari solusi praktis atas kendala operasional pencatatan stok dan administrasi data.
+          </p>
+        </div>
+
+        <div class="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-base mb-3">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h3 class="font-bold text-sm text-slate-900">Detail-Oriented & Teliti</h3>
+          <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Cermat dalam memeriksa detail nota pembelian, rekonsiliasi data stok opname, dan pengarsipan digital.
+          </p>
+        </div>
+
+        <div class="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="250">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-base mb-3">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="font-bold text-sm text-slate-900">Adaptasi & Cepat Belajar</h3>
+          <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Cepat memahami alur sistem software baru, SOP perusahaan, dan dinamika lingkungan kerja.
+          </p>
+        </div>
+
+        <div class="p-4 sm:p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-800 flex items-center justify-center text-base mb-3">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3 class="font-bold text-sm text-slate-900">Kerja Sama Tim</h3>
+          <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+            Mampu berkolaborasi aktif dengan berbagai divisi demi mencapai target operasional bersama.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 9. KONTAK & CALL TO ACTION ==================== -->
+    <section id="contact" class="scroll-mt-20" data-aos="fade-up">
+      <div class="bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Hubungi Saya</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Siap Berkontribusi Nyata Bagi Perusahaan Anda
+            </h2>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-justify">
+              Apakah perusahaan Anda membutuhkan kandidat yang teliti untuk <strong class="text-slate-800">Administrasi Gudang, Pengelola Data Excel</strong> Saya siap dihubungi untuk wawancara maupun diskusi lebih lanjut.
+            </p>
+
+            <div class="pt-2 flex flex-wrap gap-4 text-xs font-medium text-slate-600">
+              <div class="flex items-center gap-1.5">
+                <i class="fa-solid fa-location-dot text-slate-400"></i> Palembang, Sumatera Selatan
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i class="fa-solid fa-envelope text-slate-400"></i> <span class="break-all sm:break-normal">tegarsuryatama73@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex flex-col gap-2.5">
+            <a href="https://wa.me/6282179836377?text=Halo%20Tegar,%20saya%20tertarik%20dengan%20profil%20dan%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="w-full py-3 px-5 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm rounded-lg shadow-sm transition flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Hubungi via WhatsApp
+            </a>
+
+            <button onclick="copyToClipboard('tegarsuryatama73@gmail.com', 'Email tegarsuryatama73@gmail.com berhasil disalin!')" class="w-full py-3 px-5 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm rounded-lg border border-slate-300 shadow-sm transition flex items-center justify-center gap-2">
+              <i class="fa-regular fa-copy text-slate-600"></i> Salin Alamat Email
+            </button>
+
+            <a href="CV_Tegar Suryatama.pdf" download="CV_Tegar_Suryatama.pdf" class="w-full py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs sm:text-sm rounded-lg border border-slate-200 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-file-arrow-down"></i> Unduh Berkas CV (PDF)
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-slate-200 bg-white py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium text-center sm:text-left">
+      
+      <div class="flex items-center gap-2.5 justify-center sm:justify-start">
+        <!-- <div class="w-6 h-6 rounded bg-slate-900 text-white flex items-center justify-center font-bold text-[10px]">
+          TS
+        </div> -->
+        <span>© 2026 Tegar Suryatama. Hak cipta dilindungi.</span>
+      </div>
+
+      <div class="flex items-center gap-4 sm:gap-5 flex-wrap justify-center sm:justify-end">
+        <a href="https://www.linkedin.com/in/tegar-suryatama-102b65221/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition">LinkedIn</a>
+        <a href="https://www.instagram.com/tegar._.suryatama/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition">Instagram</a>
+        <a href="https://tstar7.github.io/Starmoon-Labs/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition">Starmoon Labs</a>
+        <a href="#home" class="hover:text-slate-900 transition">Kembali ke Atas ↑</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING DOCK & BACK TO TOP ==================== -->
+  <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2 sm:gap-2.5 pointer-events-none">
+    
+    <!-- Back to Top Floating Button -->
+    <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="pointer-events-auto w-9 h-9 sm:w-10 sm:h-10 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 rounded-full shadow-md flex items-center justify-center text-xs sm:text-sm transition hover:scale-105" title="Kembali ke Atas">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Salam HRD Pill Button -->
+    <button onclick="openHrdModal(); triggerConfetti();" class="pointer-events-auto px-3 py-1.5 sm:px-3.5 sm:py-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-[11px] sm:text-xs rounded-full shadow-lg flex items-center gap-1.5 hover:scale-105 transition-all">
+      <i class="fa-regular fa-handshake text-emerald-400"></i> Salam HRD
+    </button>
+
+    <!-- Floating WhatsApp Action -->
+    <a href="https://wa.me/6282179836377?text=Halo%20Tegar,%20saya%20melihat%20portofolio%20Anda." target="_blank" rel="noopener noreferrer" class="pointer-events-auto w-10 h-10 sm:w-11 sm:h-11 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-lg flex items-center justify-center text-lg sm:text-xl hover:scale-105 transition-all" title="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ==================== MODAL: SALAM HRD ==================== -->
+  <div id="hrdModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/60 modal-backdrop transition-opacity overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-md w-full p-5 sm:p-7 shadow-2xl relative border border-slate-200 my-auto max-h-[92vh] overflow-y-auto">
+      
+      <button onclick="closeHrdModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 flex items-center justify-center transition" aria-label="Tutup Modal">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div class="text-center space-y-2.5">
+        <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-800 mx-auto flex items-center justify-center text-2xl font-bold">
+          🤝
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-slate-900">
+          Terima Kasih Bapak/Ibu HRD
+        </h3>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed text-justify">
+          Saya sangat mengapresiasi waktu Anda meninjau portofolio ini. Dengan pengalaman administrasi operasional, ketelitian data, dan latar belakang informatika, saya siap berkontribusi secara profesional bagi kemajuan tim Anda.
+        </p>
+      </div>
+
+      <div class="mt-4 p-3.5 rounded-lg bg-slate-50 border border-slate-200 space-y-1.5 text-xs text-slate-700">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-check text-emerald-600 shrink-0"></i>
+          <span><strong>Kesiapan:</strong> Siap Bergabung Segera</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-check text-emerald-600 shrink-0"></i>
+          <span><strong>Keahlian:</strong> Admin Gudang & Dapur, Excel, Zahir, Antigravity AI, Web Dev</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-check text-emerald-600 shrink-0"></i>
+          <span><strong>Domisili:</strong> Palembang, Sumatera Selatan</span>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-col sm:flex-row gap-2.5">
+        <a href="https://wa.me/6282179836377?text=Halo%20Tegar,%20kami%20dari%20tim%20HRD%20ingin%20mengundang%20Anda%20untuk%20diskusi%20lanjutan." target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-lg text-center transition flex items-center justify-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> Hubungi WhatsApp
+        </a>
+        <a href="CV_Tegar Suryatama.pdf" download="CV_Tegar_Suryatama.pdf" class="flex-1 py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs rounded-lg text-center border border-slate-200 transition flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-download"></i> Unduh CV (PDF)
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: DETAIL PROYEK ==================== -->
+  <div id="projectModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/60 modal-backdrop overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-5 sm:p-7 shadow-2xl relative border border-slate-200 my-auto max-h-[92vh] overflow-y-auto">
+      
+      <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 flex items-center justify-center transition" aria-label="Tutup Modal">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div id="projectModalContent">
+        <!-- Injected dynamically via JS -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: PREVIEW SERTIFIKAT ==================== -->
+  <div id="certModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/75 modal-backdrop overflow-y-auto" onclick="closeCertModal()">
+    <div class="relative max-w-2xl w-full bg-white rounded-xl p-3 sm:p-4 shadow-2xl border border-slate-200 my-auto max-h-[92vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <button onclick="closeCertModal()" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-slate-700 transition" aria-label="Tutup Modal">
+        <i class="fa-solid fa-xmark text-xs"></i>
+      </button>
+      <img id="certModalImg" src="" alt="Preview Sertifikat" class="w-full max-h-[70vh] sm:max-h-[75vh] object-contain mx-auto rounded-lg border border-slate-100">
+      <div class="mt-2.5 text-center">
+        <h4 id="certModalTitle" class="font-bold text-sm text-slate-900"></h4>
+        <p id="certModalMeta" class="text-[11px] text-slate-500"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold shadow-xl border border-slate-700 flex items-center gap-2">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toastMessage">Berhasil!</span>
+  </div>
+
+  <!-- ==================== THIRD-PARTY LIBRARIES ==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- ==================== MODULAR JAVASCRIPT FILES ==================== -->
+  <!-- 1. Portfolio Data (Projects & Roles) -->
+  <script src="js/projects-data.js"></script>
+
+  <!-- 2. Portfolio Main Engine (Animations & UI Controls) -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
